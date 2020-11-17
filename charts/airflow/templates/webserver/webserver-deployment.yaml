@@ -218,6 +218,7 @@ spec:
                && echo "*** installing extra pip packages..." \
                && pip install --user {{ range .Values.web.extraPipPackages }} {{ . | quote }} {{ end }} \
               {{- end }}
+               && chmod -R airflow:airflow .
                && echo "*** running webserver..." \
                && exec airflow webserver
           {{- if .Values.web.livenessProbe.enabled }}

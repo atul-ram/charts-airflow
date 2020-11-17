@@ -35,7 +35,6 @@ data:
     fi
 
     git clone $REPO -b $REF $DIR
-    chown -R airflow:airflow $DIR
   git-sync.sh: |
     #!/bin/sh -e
     REPO=$1
