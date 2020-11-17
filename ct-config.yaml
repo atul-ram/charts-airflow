@@ -1,5 +1,5 @@
 remote: origin
-target-branch: main
+target-branch: support_clone_git_repo_as_airflow_user_instead_of_root
 chart-dirs:
   - charts
 chart-repos:
