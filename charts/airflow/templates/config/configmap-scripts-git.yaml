@@ -62,6 +62,8 @@ data:
       rm -rf $( find $DIR -mindepth 1 )
     fi
     git clone $REPO -b $REF $DIR
+    chmod -R airflow:airflow .
+    chmod -R airflow:airflow $DIR
     {{- end }}
 
     # to break the infinite loop when we receive SIGTERM
